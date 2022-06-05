@@ -20,7 +20,6 @@ const cp = execFile(
     cwd: path.resolve(__dirname, "../lib"),
   },
   (err, stdout, stderr) => {
-    // 这里会输出子进程的全部输出，但子进程输出数据比较大的时候，我们也不可能无限制的让它输出，这样可能会导致内存溢出，所以会有maxBuffer的参数进行限制(1048576)。
     console.log("stdout:", stdout);
   }
 );

@@ -15,6 +15,7 @@ const cpus = require("os").cpus();
 //     .listen(8000);
 // }
 
+// 将服务单独写在一个文件的时候
 cluster.setupMaster({
   exec: path.resolve(__dirname, "./server.js"),
 });

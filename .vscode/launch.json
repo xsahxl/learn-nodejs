@@ -7,6 +7,15 @@
     {
       "type": "pwa-node",
       "request": "launch",
+      "name": "2.spawn",
+      "skipFiles": [
+        // "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/process/2.spawn.js"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
       "name": "3.fork",
       "skipFiles": [
         // "<node_internals>/**"
