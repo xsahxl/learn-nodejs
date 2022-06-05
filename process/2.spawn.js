@@ -5,7 +5,7 @@ const path = require("path");
 // [process.stdin, process.stdout, process.stderr] = [0, 1, 2];
 
 const cp = spawn("node", ["fib.js"], {
-  cwd: path.resolve(__dirname, "./lib"),
+  cwd: path.resolve(__dirname, "../lib"),
   // stdio: [0, 1, 2, "ipc"],
   //   stdio: "pipe",
   // stdio: "inherit",

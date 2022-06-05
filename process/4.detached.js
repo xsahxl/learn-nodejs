@@ -3,7 +3,7 @@ const path = require("path");
 
 // 将options.detached设置为true可以使子进程在父进程退出后继续运行。
 const cp = spawn("node", ["writefile.js"], {
-  cwd: path.resolve(__dirname, "./lib"),
+  cwd: path.resolve(__dirname, "../lib"),
   detached: true,
   stdio: "ignore",
 });

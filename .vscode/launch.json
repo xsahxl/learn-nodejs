@@ -11,7 +11,7 @@
       "skipFiles": [
         // "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/3.fork.js"
+      "program": "${workspaceFolder}/process/3.fork.js"
     },
     {
       "type": "pwa-node",
@@ -20,7 +20,7 @@
       "skipFiles": [
         // "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/5.execFile.js"
+      "program": "${workspaceFolder}/process/5.execFile.js"
     },
     {
       "type": "pwa-node",
@@ -29,7 +29,16 @@
       "skipFiles": [
         // "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/6.exec.js"
+      "program": "${workspaceFolder}/process/6.exec.js"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "cluster",
+      "skipFiles": [
+        // "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/cluster/new.js"
     }
   ]
 }

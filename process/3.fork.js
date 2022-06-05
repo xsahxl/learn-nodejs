@@ -3,7 +3,7 @@ const path = require("path");
 
 // fork 默认调用node命令，通过ipc进行通信
 const cp = fork("fib.js", {
-  cwd: path.resolve(__dirname, "./lib"),
+  cwd: path.resolve(__dirname, "../lib"),
 });
 
 cp.on("close", (code) => {

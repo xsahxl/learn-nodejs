@@ -5,7 +5,7 @@ const path = require("path");
 const cp = exec(
   "echo $USER",
   {
-    cwd: path.resolve(__dirname, "./lib"),
+    cwd: path.resolve(__dirname, "../lib"),
   },
   (err, stdout, stderr) => {
     console.log("stdout:", stdout);
