@@ -3,6 +3,8 @@ const http = require("http");
 const path = require("path");
 const cpus = require("os").cpus();
 
+console.log(cpus.length);
+
 const server = http
   .createServer(async (req, res) => {
     return res.end("master\n");

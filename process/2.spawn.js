@@ -7,10 +7,10 @@ const path = require("path");
 const cp = spawn("node", ["fib.js"], {
   cwd: path.resolve(__dirname, "../lib"),
   // stdio: [0, 1, 2, "ipc"],
-  //   stdio: "pipe",
+  // stdio: "pipe",
   // stdio: "inherit",
-  //   stdio: [0, 1, 2],
-  //   stdio: [process.stdin, process.stdout, process.stderr],
+  // stdio: [0, 1, 2],
+  // stdio: [process.stdin, process.stdout, process.stderr],
 });
 
 cp.on("exit", (code) => {
