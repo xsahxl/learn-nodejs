@@ -6,11 +6,15 @@ const path = require("path");
 
 const cp = spawn("node", ["fib.js"], {
   cwd: path.resolve(__dirname, "./lib"),
-  stdio: [0, 1, 2, "ipc"],
+  // stdio: [0, 1, 2, "ipc"],
   //   stdio: "pipe",
-  //   stdio: "inherit",
+  // stdio: "inherit",
   //   stdio: [0, 1, 2],
   //   stdio: [process.stdin, process.stdout, process.stderr],
+});
+
+cp.on("exit", (code) => {
+  console.log(`exit子进程退出码：${code}`);
 });
 
 cp.on("close", (code) => {
@@ -18,22 +22,17 @@ cp.on("close", (code) => {
 });
 
 cp.on("error", (err) => {
-  console.log(err);
-});
-
-cp.on("exit", (code) => {
-  console.log(`exit子进程退出码：${code}`);
+  console.log("err:", err);
 });
 
 // 流的方式
 // cp.stdout.on("data", (data) => {
 //   console.log(`父进程接收到的数据：${data.toString()}`);
 // });
-
 // cp.stdout.write("父进程发送数据");
 
 // ipc
-cp.send("我是父进程");
-cp.on("message", (data) => {
-  console.log(`父进程接收到的数据：${data}`);
-});
+// cp.send("我是父进程");
+// cp.on("message", (data) => {
+//   console.log(`父进程接收到的数据：${data}`);
+// });

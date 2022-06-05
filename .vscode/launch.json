@@ -7,11 +7,29 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "3.fork",
       "skipFiles": [
         // "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/3.fork.js"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "5.execFile",
+      "skipFiles": [
+        // "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/5.execFile.js"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "6.exec",
+      "skipFiles": [
+        // "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/6.exec.js"
     }
   ]
 }
